@@ -55,7 +55,11 @@ $ac-plate: rgba(var(--gg-scrim-rgb), 0.86);                       // plate and p
             align-items: center;
             justify-content: center;
             width: 100%;
-            aspect-ratio: 3 / 4;
+            // A game's cover art is a 2:3 poster far more often than not (600x900 is
+            // what most of them ship), so that is the shape of the plate: at 3:4 the
+            // top and the bottom of nearly every cover were cropped away. The home
+            // board's band overrides this - its height comes from the row (_page-home).
+            aspect-ratio: 2 / 3;
             overflow: hidden;
             background: var(--gg-card-image-bg, linear-gradient(160deg, var(--gg-bg-2) 0%, var(--gg-bg-3) 55%, var(--gg-tile-deep) 100%));
 
